@@ -8,7 +8,7 @@
 - Add timer
 
 ## To Run
-Visit [Tic Tac Toe](https://chma.dev/tic-tac-tow) to view this project on your browser.
+Visit [Tic Tac Toe](https://chma.dev/tic-tac-toe) to view this project on your browser.
 
 ## License
 MIT License
