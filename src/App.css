@@ -5,6 +5,12 @@
     padding: 2rem;
     text-align: center;
   }
+  .status {
+    font-size: 11vw;
+  }
+  .imgTurn {
+    height: 14vw;
+  }
 }
 
 @media only screen and (min-width: 600px) {
@@ -13,6 +19,12 @@
     margin: 0 auto;
     padding: 2rem;
     text-align: center;
+  }
+  .status {
+    font-size: 6vw;
+  }
+  .imgTurn {
+    height: 8vw;
   }
 }
 
@@ -78,17 +90,17 @@
 }
 
 .imgBtn {
-  max-width: 100%;
+  max-width: 90%;
+  display: flex;
+  margin: auto;
 }
 
 .imgTurn {
-  max-width: 125px;
-  margin-left: 10px;
+  margin-left: 15px;
 }
 
 .status {
   align-items: center;
   justify-content: center;
   display: flex;
-  font-size: 9vw;
 }

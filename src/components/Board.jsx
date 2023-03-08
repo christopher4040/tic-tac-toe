@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import '../App.css';
 import Square from './Square';
+import xImg from '../assets/X.png';
+import oImg from '../assets/O.png';
 
 function Board() {
-  const xImg = 'X';
-  const oImg = 'O';
   const [player, setPlayer] = useState(1);
   const [gameState, setGameState] = useState([]);
 
@@ -81,7 +81,19 @@ function Board() {
 
   return (
     <>
-      <h1>{status}</h1>
+      <h1 className="status">
+        {status}{' '}
+        <img
+          className="imgTurn"
+          src={
+            checkForWinner(gameState)
+              ? checkForWinner(gameState)
+              : player == 0
+              ? oImg
+              : xImg
+          }
+        />
+      </h1>
       <div className="game-board">
         <div className="grid-row">
           {renderSquare(0)}
