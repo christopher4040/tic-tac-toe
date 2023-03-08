@@ -73,10 +73,6 @@
   aspect-ratio: 1 / 1;
 }
 
-.button:hover {
-  box-shadow: 5px 5px 5px 5px lightgray;
-}
-
 .grid-row {
   border-radius: 6px;
   font-size: 10vw;
@@ -96,11 +92,17 @@
 }
 
 .imgTurn {
-  margin-left: 15px;
+  margin-right: 10px;
 }
 
 .status {
   align-items: center;
   justify-content: center;
   display: flex;
+}
+
+.game-board {
+  background: #ffffff13;
+  border-radius: 15px;
+  padding: 4px;
 }

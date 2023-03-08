@@ -8,8 +8,6 @@ function Board() {
   const [player, setPlayer] = useState(1);
   const [gameState, setGameState] = useState([]);
 
-  let status = checkForWinner(gameState) ? 'x' : 'Next Player:';
-
   const win = [
     // rows
     [0, 1, 2],
@@ -23,6 +21,18 @@ function Board() {
     [0, 4, 8],
     [2, 4, 6],
   ];
+
+  // check if subset is in the set
+  const isSuperset = (set, subset) => {
+    for (let elem of subset) {
+      if (!set.has(elem)) {
+        return false;
+      }
+    }
+    return true;
+  };
+
+  let status = checkForWinner(gameState) ? 'Wins!' : 'Turn';
 
   const takeTurn = (id) => {
     setGameState([...gameState, { id: id, player: player }]);
@@ -69,20 +79,9 @@ function Board() {
     }
   }
 
-  // check if subset is in the set
-  const isSuperset = (set, subset) => {
-    for (let elem of subset) {
-      if (!set.has(elem)) {
-        return false;
-      }
-    }
-    return true;
-  };
-
   return (
     <>
       <h1 className="status">
-        {status}{' '}
         <img
           className="imgTurn"
           src={
@@ -93,6 +92,7 @@ function Board() {
               : xImg
           }
         />
+        {status}
       </h1>
       <div className="game-board">
         <div className="grid-row">
